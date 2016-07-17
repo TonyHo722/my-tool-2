@@ -20,14 +20,9 @@ else:
 for filename in filenames:
     print filename
     filename_with_newline = filename+'\n'
-    for Mnemonic in MnemonicList :
-        if filename_with_newline == Mnemonic:
-            break
-    else:
+    if filename_with_newline not in MnemonicList :
+        print "append {}".format(filename_with_newline)
         MnemonicListAppend.append(filename_with_newline)
-
-
-
 
 f.writelines(MnemonicListAppend)
 
