@@ -1,19 +1,19 @@
 
 
 import glob
+import os.path
 
-import sys
-
-print sys.argv
 
 argv = '*.jpg'
-path = 'F:\\Code\\samples\\' + sys.argv[1]
+
+path = argv
 
 #filenames = glob.glob('F:\\Code\\samples\*.jpg')
 filenames = glob.glob(path)
 
 for filename in filenames:
     print filename
+    print os.path.abspath(filename)
 
 '''
 
